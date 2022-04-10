@@ -1,3 +1,4 @@
+AddCSLuaFile()
 return {
     Name = "Store-Integrations",
     Version = "1.0",
