@@ -8,7 +8,7 @@ CATEGORY_NAME = "Pulsar"
 function ulx.givecredits( calling_ply, target_ply, num )
     if SERVER then
         Lyth_Pulsar.DebugLog(target_ply)
-        Lyth_Pulsar.DB.GiveCredits(calling_ply, target_ply, num)
+        Lyth_Pulsar.GiveCredits(calling_ply, target_ply, num)
     end
     local name = "credits"
     if num == "1" then name = "credit" end
@@ -26,7 +26,7 @@ pulsar_give:help(lang["SAMGiveCreditsHelp"])
 function ulx.removecredits( calling_ply, target_ply, num )
     if SERVER then
         Lyth_Pulsar.DebugLog(target_ply)
-        Lyth_Pulsar.DB.RemoveCredits(calling_ply, target_ply, num)
+        Lyth_Pulsar.RemoveCredits(calling_ply, target_ply, num)
     end
     local name = "credits"
     if num == "1" then name = "credit" end

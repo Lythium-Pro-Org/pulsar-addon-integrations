@@ -7,16 +7,16 @@ XeninDS.Currencies:set("pulsar", {
         if CLIENT then return end
 
             if money >= 0 then
-                Lyth_Pulsar.DB.GiveCredits(nil, ply, money)
+                Lyth_Pulsar.GiveCredits(nil, ply, money)
             else
-                Lyth_Pulsar.DB.RemoveCredits(nil, ply, money)
+                Lyth_Pulsar.RemoveCredits(nil, ply, money)
             end
         end,
         get = function(self, ply)
             local playerID = ply:SteamID64()
             local credits = 0
 
-            Lyth_Pulsar.DB.GetCredits(playerID, function(data)
+            Lyth_Pulsar.GetCredits(playerID, function(data)
                 credits = data.credits
             end)
 
@@ -26,7 +26,7 @@ XeninDS.Currencies:set("pulsar", {
         local playerID = ply:SteamID64()
         local credits = 0
 
-            Lyth_Pulsar.DB.GetCredits(playerID, function(data)
+            Lyth_Pulsar.GetCredits(playerID, function(data)
                 credits = data.credits
             end)
 

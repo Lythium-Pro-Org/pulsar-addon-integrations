@@ -25,7 +25,7 @@ sam.command.new("givecredits")
 
   :OnExecute(function(calling_ply, player, number)
     if SERVER then
-      Lyth_Pulsar.DB.GiveCredits(calling_ply, player, number)
+      Lyth_Pulsar.GiveCredits(calling_ply, player, number)
     end
     sam.player.send_message(nil, "{A} gave {T} {V} Credits", {
         A = calling_ply, T = player, V = number
@@ -51,7 +51,7 @@ sam.command.new("removecredits")
 
   :OnExecute(function(calling_ply, player, number)
     if SERVER then
-      Lyth_Pulsar.DB.RemoveCredits(calling_ply, player, number)
+      Lyth_Pulsar.RemoveCredits(calling_ply, player, number)
     end
     sam.player.send_message(nil, "{A} removed {V} credits from {T}", {
         A = calling_ply, T = player, V = number

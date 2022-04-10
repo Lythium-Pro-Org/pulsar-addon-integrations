@@ -12,7 +12,7 @@ function DROP:CanLoot(ent, ply, type)
 end
 
 function DROP:Loot(ent, ply, type)
-    Lyth_Pulsar.DB.GiveCredits(ply, ent)
+    Lyth_Pulsar.GiveCredits(ply, ent)
 end
 
 function DROP:GetName(ent)

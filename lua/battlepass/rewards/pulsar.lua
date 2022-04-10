@@ -31,7 +31,7 @@ end
 
 function REWARD:Unlock(ply, reward)
     if (SERVER) then
-        Lyth_Pulsar.DB.GiveCredits(nil, ply, reward)
+        Lyth_Pulsar.GiveCredits(nil, ply, reward)
     end
 end
 
