@@ -58,3 +58,29 @@ sam.command.new("removecredits")
     })
   end)
 :End()
+
+sam.command.new("setcredits")
+  :SetPermission("setcredits", "superadmin")
+  :SetCategory("Pulsar")
+  :Help("Sets a players credits")
+
+  :AddArg("player", {
+    hint = "Player to set credits",
+    single_target = true,
+    allow_higher_target = true,
+  })
+
+  :AddArg("number", {
+    hint = "Number of credits to set",
+    round = true
+  })
+
+  :OnExecute(function(calling_ply, player, number)
+    if SERVER then
+      Lyth_Pulsar.SetCredits(calling_ply, player, number)
+    end
+    sam.player.send_message(nil, "{A} set {T} Credits to {V}", {
+        A = calling_ply, T = player, V = number
+    })
+  end)
+:End()

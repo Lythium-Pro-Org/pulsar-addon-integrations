@@ -39,3 +39,19 @@ pulsar_remove:addParam{ type = ULib.cmds.PlayerArg }
 pulsar_remove:addParam{ type = ULib.cmds.StringArg, hint = lang["SAMRemoveCreditsNumHint"], ULib.cmds.takeRestOfLine }
 pulsar_remove:defaultAccess( ULib.ACCESS_SUPERADMIN  )
 pulsar_remove:help(lang["SAMRemoveCreditsHelp"])
+
+-- Set Credits
+function ulx.setcredits( calling_ply, target_ply, num )
+    if SERVER then
+        Lyth_Pulsar.DebugLog(target_ply)
+        Lyth_Pulsar.SetCredits(calling_ply, target_ply, num)
+    end
+
+    ulx.fancyLogAdmin(calling_ply, true, "#A set #T credits to #s", num, target_ply )
+end
+
+local pulsar_set = ulx.command(CATEGORY_NAME, "ulx removecredits", ulx.removecredits, "!removecredits")
+pulsar_set:addParam{ type = ULib.cmds.PlayerArg }
+pulsar_set:addParam{ type = ULib.cmds.StringArg, hint = "Set a players credits", ULib.cmds.takeRestOfLine }
+pulsar_set:defaultAccess( ULib.ACCESS_SUPERADMIN  )
+pulsar_set:help("Set a players credits")
