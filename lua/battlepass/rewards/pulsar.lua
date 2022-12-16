@@ -1,3 +1,8 @@
+Lyth_Pulsar = Lyth_Pulsar or {}
+Lyth_Pulsar.Config = Lyth_Pulsar.Config or {}
+Lyth_Pulsar.Lang = Lyth_Pulsar.Lang or {}
+local lang = Lyth_Pulsar.Lang
+
 local REWARD = BATTLEPASS:CreateReward()
 REWARD.Mat = "battlepass/credit.png"
 
