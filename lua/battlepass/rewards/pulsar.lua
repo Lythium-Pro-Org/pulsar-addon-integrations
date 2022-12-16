@@ -13,7 +13,7 @@ end
 function REWARD:GetTooltip(reward)
     local creditText = lang["creditSingle"]
 
-    if tonumber(num) > 1 then
+    if tonumber(reward) > 1 then
         creditText = lang["creditsSingle"]
     end
 
@@ -23,7 +23,7 @@ end
 function REWARD:GetName(reward)
     local creditText = lang["creditSingle"]
 
-    if tonumber(num) > 1 then
+    if tonumber(reward) > 1 then
         creditText = lang["creditsSingle"]
     end
 
