@@ -17,7 +17,7 @@ function REWARD:GetTooltip(reward)
         creditText = lang["creditsSingle"]
     end
 
-    return string.Comma(reward) .. creditText
+    return string.Comma(reward) .. " " .. creditText
 end
 
 function REWARD:GetName(reward)
@@ -27,7 +27,7 @@ function REWARD:GetName(reward)
         creditText = lang["creditsSingle"]
     end
 
-    return string.Comma(reward) .. creditText
+    return string.Comma(reward) .. " " .. creditText
 end
 
 function REWARD:GetModel()
